@@ -1,0 +1,41 @@
+class Solution:
+    def countDistinct(self, arr, k):
+        d = {}
+        l = []
+        for i in range(k):
+            d[arr[i]] = d.get(arr[i], 0) + 1
+        l.append(len(d))
+        for j in range(k, len(arr)):
+            d[arr[j - k]] -= 1
+            if d[arr[j - k]] == 0:
+                del d[arr[j - k]]
+            d[arr[j]] = d.get(arr[j], 0) + 1
+            l.append(len(d))
+        return l
+
+#{ 
+ # Driver Code Starts
+import sys
+from collections import defaultdict
+if __name__ == '__main__':
+    input = sys.stdin.read
+    data = input().splitlines()
+    t = int(data[0])
+    index = 1
+    while t > 0:
+        arr = list(map(int, data[index].strip().split()))
+        index += 1
+        k = int(data[index])
+        index += 1
+
+        ob = Solution()
+        res = ob.countDistinct(arr, k)
+
+        for element in res:
+            print(element, end=" ")
+        print()
+        print("~")
+
+        t -= 1
+
+# } Driver Code Ends
