@@ -2,30 +2,21 @@
 
 class Solution:
     def nQueen(self, n):
-        bd=[None]*n
-        rw=set()
-        up=set()
-        dn=set()
-        ret=[]
-        def bt(x=0):
-            nonlocal n,bd,rw,up,dn,ret
-            if x==n:
-                return True
-            for y in range(n):
-                if y in rw or y+x in up or y-x in dn:
-                    continue
-                bd[x]=y
-                rw.add(y)
-                up.add(y+x)
-                dn.add(y-x)
-                if bt(x+1):
-                    ret.append([x+1 for x in bd])
-                bd[x]=None
-                rw.discard(y)
-                up.discard(y+x)
-                dn.discard(y-x)
-        bt()
-        return ret
+        result = []
+        def backtrack(col, path, rows, diags, anti_diags):
+            if col > n:
+                result.append(path)
+                return
+            for row in range(1, n+1):
+                row_mask = 1 << (row - 1)
+                diag = row - col
+                diag_mask = 1 << (diag + n - 1)
+                anti_diag = row + col
+                anti_diag_mask = 1 << (anti_diag - 2)
+                if not (rows & row_mask) and not (diags & diag_mask) and not (anti_diags & anti_diag_mask):
+                    backtrack(col + 1, path + [row], rows | row_mask, diags | diag_mask, anti_diags | anti_diag_mask)
+        backtrack(1, [], 0, 0, 0)
+        return result
 
 #{ 
  # Driver Code Starts
