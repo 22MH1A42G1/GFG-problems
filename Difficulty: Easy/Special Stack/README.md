@@ -1,0 +1,11 @@
+<h2><a href="https://www.geeksforgeeks.org/problems/special-stack/1?page=1&category%255B%255D=Stack&sortBy=submissions">Special Stack</a></h2><h3>Difficulty Level : Difficulty: Easy</h3><hr><div class="problems_problem_content__Xm_eO"><p><span style="font-size: 18px;">Design a data-structure<strong> </strong>SpecialStack<strong>&nbsp;</strong>that supports all the stack operations like <strong>push()</strong>, <strong>pop()</strong>,<strong> isEmpty()</strong>, <strong>isFull()</strong> and an additional operation <strong>getMin()</strong> which should return the <strong>minimum </strong>element from the SpecialStack. Your task is to complete all the functions, using a stack data structure.</span></p>
+<p><span style="font-size: 18px;"><strong>Note:</strong>&nbsp;The output of the code will be the value returned by&nbsp;<strong>getMin()&nbsp;</strong>function.</span></p>
+<p><span style="font-size: 18px;"><strong>Examples:</strong></span></p>
+<pre><span style="font-size: 18px;"><strong>Input: </strong>stack: 18 19 29 15 16<strong>
+Output: </strong>15
+<strong>Explanation: </strong>The minimum element of the stack is 15.<br></span></pre>
+<pre><strong>I<span style="font-size: 14pt;">nput: </span></strong><span style="font-size: 14pt;">stack: 34 335 1814 86<strong>
+Output: </strong>34
+<strong>Explanation: </strong>The minimum element of the stack is 34.</span></pre>
+<p><span style="font-size: 18px;"><strong>Expected Time Complexity: </strong>O(n)<br><strong>Expected Auxiliary Space:&nbsp;</strong>O(1)</span></p>
+<p><span style="font-size: 18px;"><strong>Constraints:</strong><br>1 ≤ stack.size() ≤ 10<sup>4</sup></span></p></div><p><span style=font-size:18px><strong>Company Tags : </strong><br><code>Paytm</code>&nbsp;<code>VMWare</code>&nbsp;<code>Flipkart</code>&nbsp;<code>Amazon</code>&nbsp;<code>Microsoft</code>&nbsp;<code>FactSet</code>&nbsp;<code>MakeMyTrip</code>&nbsp;<code>Walmart</code>&nbsp;<code>Goldman Sachs</code>&nbsp;<code>Intuit</code>&nbsp;<code>Adobe</code>&nbsp;<code>SAP Labs</code>&nbsp;<code>Linkedin</code>&nbsp;<br><p><span style=font-size:18px><strong>Topic Tags : </strong><br><code>Stack</code>&nbsp;<code>STL</code>&nbsp;<code>Data Structures</code>&nbsp;
